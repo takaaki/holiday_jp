@@ -1,4 +1,4 @@
-require 'helper'
+require File.dirname(__FILE__) + '/helper'
 
 class TestHolidayJp < Test::Unit::TestCase
   should "#between return correct holidays" do
@@ -14,7 +14,7 @@ class TestHolidayJp < Test::Unit::TestCase
       assert Date.civil(2009,1,1).japanese_holiday?
     end
     should "return false if the day is not a Japanese holiday" do
-    assert !Date.civil(2009,1,2).japanese_holiday?
+      assert !Date.civil(2009,1,2).japanese_holiday?
     end
   end
   
